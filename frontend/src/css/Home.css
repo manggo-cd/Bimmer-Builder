@@ -1,0 +1,37 @@
+.home {
+    background-color: #4b5c6d;
+    overflow: hidden;
+}
+.home .title {
+    text-align: center;
+}
+.home .title h1 {
+    padding-top: 30px;
+    color: white;
+    
+}
+.home .info {
+    text-align: center;
+}
+.info p {
+    
+}
+.home .button {
+    text-align: center;
+}
+.home .button button {
+
+}
+.home .image {
+
+}
+.home .image img {
+    display: block;
+    height: 750px;
+    margin: auto;
+}
+@media (max-width: 1100px){
+    .home .image img {
+        display: none;
+    }
+}
