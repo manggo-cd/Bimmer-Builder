@@ -7,5 +7,3 @@ const app = express();
 
 // Cors
 app.use(cors());
-
-// 
