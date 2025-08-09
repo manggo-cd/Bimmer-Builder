@@ -1,32 +1,27 @@
-import { Route, Routes, useLocation } from 'react-router'
+import { Route, Routes } from 'react-router';
 
-import Home from './pages/Home'
-import Login from './pages/Login'
-
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Protected from './components/Protected';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
-  const location = useLocation();
-
-  // List of routes where NavBar and Footer should be hidden
-  const hideLayoutRoutes = ['/login'];
-
-  const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
-
   return (
     <>
-      {!shouldHideLayout && <NavBar />}
-      <main className="main-content">
+      <AuthProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* { Public routes } */}
           <Route path="/login" element={<Login />} />
-          
+
+          {/* Routes that require user to log in */}
+          <Route element={<Protected />}>
+            <Route path="/" element={<Home />} />
+
+          </Route>
         </Routes>
-      </main>
-      {!shouldHideLayout && <Footer />}
+      </AuthProvider>
     </>
   );
-}
+};
 
-export default App
+export default App;

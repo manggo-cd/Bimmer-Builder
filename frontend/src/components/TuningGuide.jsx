@@ -1,4 +1,4 @@
-import '../css/TuningGuide.css'
+import '../css/TuningGuide.css';
 
 function TuningGuide() {
     return <section className="tuning-guide-section">
@@ -30,6 +30,6 @@ function TuningGuide() {
             </div>
         </div>
     </section>
-}
+};
 
-export default TuningGuide
+export default TuningGuide;

@@ -1,7 +1,7 @@
-import '../css/Home.css'
+import '../css/Home.css';
 
-import TuningGuide from '../components/TuningGuide'
-import CrashedBmw from '../images/crashed-bmw.svg'
+import TuningGuide from '../components/TuningGuide';
+import CrashedBmw from '../images/crashed-bmw.svg';
 
 function Home() {
     return <>
@@ -24,6 +24,6 @@ function Home() {
         </section>
         <TuningGuide />
     </>
-}
+};
 
-export default Home
+export default Home;
