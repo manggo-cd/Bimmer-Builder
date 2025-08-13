@@ -28,16 +28,15 @@ function AuthProvider({ children }) {
         };
     }, []);
 
-    const handleLogin = async () => {
+    async function handleLogin() {
         try {
-            const result = await signInWithPopup(auth, provider);
-            const user = result.user;
+            await signInWithPopup(auth, provider);
         } catch (error) {
             console.error("Login failed:", error.message);
         }
     };
 
-    const handleLogout = async () => {
+    async function handleLogout() {
         try {
             await signOut(auth);
             setUser(null);
