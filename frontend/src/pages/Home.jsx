@@ -1,6 +1,7 @@
 import '../css/Home.css';
 
 import TuningGuide from '../components/TuningGuide';
+import AuthTest from '../components/AuthTest';
 import CrashedBmw from '../images/crashed-bmw.svg';
 
 function Home() {
@@ -22,6 +23,12 @@ function Home() {
                 <img src={CrashedBmw}></img>
             </div>
         </section>
+        
+        {/* Authentication Test Section */}
+        <section className="auth-test-section">
+            <AuthTest />
+        </section>
+        
         <TuningGuide />
     </>
 };
